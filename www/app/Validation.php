@@ -5,7 +5,7 @@ namespace ToDo;
 class Validation{
     private static $errors = [];
     public static function validator($post){
-        if(strlen(trim($post['subject'])) == ''){
+        if(trim($post['subject']) == ''){
             self::$errors[] = 'Neįvesta užduotis';
         }
         if(!array_key_exists('priority', $post)){

@@ -6,9 +6,12 @@
         <div class="card-header">
             TODO APP
         </div>
-        <?php if(isset($_POST['save'])) :?>
+        <?php foreach ($errors as $error): ?>
+            <div class="alert alert-danger" role="alert">
+                <?= $error; ?>
+            </div>
+        <?php endforeach; ?>
 
-        <?php endif; ?>
         <form method="post">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Užduoties pavadinimas" name="subject">
